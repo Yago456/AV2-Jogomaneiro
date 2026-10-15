@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calabouço dos Números: um jogo educativo de matemática para estudantes do 6º ano.">
+  <title>Calabouço dos Números</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topo">
+    <a class="marca" href="#" aria-label="Calabouço dos Números - início">
+      <span class="marca-icone" aria-hidden="true">🧙</span>
+      <span>Calabouço <strong>dos Números</strong></span>
+    </a>
+    <span class="selo">MATEMÁTICA • 6º ANO</span>
+  </header>
+
+  <main class="container">
+    <section id="tela-inicial" class="painel tela inicial">
+      <div class="arte-inicial" aria-hidden="true">
+        <span class="estrela estrela-a">✦</span>
+        <span class="estrela estrela-b">✦</span>
+        <div class="castelo">🏰</div>
+        <div class="slime slime-a">🟢</div>
+        <div class="slime slime-b">🟣</div>
+        <div class="chao">🪨　🪨　🪨　🪨　🪨</div>
+      </div>
+      <p class="sobretitulo">UMA AVENTURA MATEMÁGICA</p>
+      <h1>Calabouço<br><span>dos Números</span></h1>
+      <p class="descricao">Resolva desafios, ganhe estrelas e ajude o Mago Nino a atravessar o calabouço!</p>
+      <div class="como-jogar">
+        <div><span>🧠</span><p><strong>Pense</strong><br>Leia a conta.</p></div>
+        <div><span>✨</span><p><strong>Responda</strong><br>Escolha uma opção.</p></div>
+        <div><span>🏆</span><p><strong>Avance</strong><br>Consiga estrelas.</p></div>
+      </div>
+      <button id="botao-comecar" class="botao botao-principal">Entrar no calabouço <span aria-hidden="true">➜</span></button>
+      <p class="nota">Sem pressa: aprender também faz parte da aventura!</p>
+    </section>
+
+    <section id="tela-jogo" class="painel tela escondido" aria-live="polite">
+      <div class="barra-topo">
+        <button id="botao-sair" class="botao-voltar" type="button" aria-label="Voltar ao início">← Início</button>
+        <div class="progresso-texto"><span id="texto-andar">Sala 1 de 10</span><span id="texto-pontos">⭐ 0</span></div>
+      </div>
+      <div class="barra-progresso" aria-label="Progresso da aventura"><div id="progresso" class="progresso-preenchido"></div></div>
+      <div class="mascote-linha">
+        <div class="mascote" aria-hidden="true">🧙</div>
+        <div class="fala"><strong>Mago Nino diz:</strong><p id="mensagem-mago">Vamos começar!</p></div>
+      </div>
+      <div class="pergunta-cartao">
+        <div class="categoria" id="categoria">➕ OPERAÇÕES</div>
+        <h2 id="pergunta">Quanto é 7 + 5?</h2>
+        <p class="instrucao">Escolha a resposta correta:</p>
+        <div id="opcoes" class="opcoes">
+          <button class="opcao">10</button><button class="opcao">12</button><button class="opcao">13</button><button class="opcao">14</button>
+        </div>
+        <div id="retorno" class="retorno" role="status" aria-live="polite"></div>
+        <button id="botao-continuar" class="botao botao-principal escondido">Próxima sala ➜</button>
+      </div>
+      <div class="estatisticas">
+        <div><span>❤️</span><div><small>Vidas</small><strong id="texto-vidas">3</strong></div></div>
+        <div><span>⭐</span><div><small>Estrelas</small><strong id="texto-estrelas">0</strong></div></div>
+        <div><span>🚪</span><div><small>Salas</small><strong id="texto-salas">0/10</strong></div></div>
+      </div>
+    </section>
+
+    <section id="tela-final" class="painel tela final escondido" aria-live="polite">
+      <div id="icone-final" class="icone-final" aria-hidden="true">🏆</div>
+      <p class="sobretitulo">FIM DA AVENTURA</p>
+      <h1 id="titulo-final">Você conseguiu!</h1>
+      <p id="mensagem-final" class="descricao">O calabouço está em paz!</p>
+      <div class="resultado">
+        <div><span>⭐</span><strong id="resultado-pontos">0</strong><small>estrelas</small></div>
+        <div><span>🧩</span><strong id="resultado-acertos">0/10</strong><small>acertos</small></div>
+      </div>
+      <p id="dica-final" class="dica-final"></p>
+      <button id="botao-reiniciar" class="botao botao-principal">Jogar novamente ↻</button>
+      <button id="botao-inicio-final" class="botao botao-secundario">Voltar ao início</button>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <span>📚 Aprender é uma aventura!</span>
+    <span>Projeto educativo • Matemática • 6º ano</span>
+  </footer>
+</body>
+</html>
